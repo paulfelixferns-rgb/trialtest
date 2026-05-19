@@ -6,6 +6,7 @@ DB_NAME = os.path.join(BASE_DIR, "dc.db")
 
 #def get_connection():
   #  return sqlite3.connect(DB_NAME)
+    return sqlite3.connect(DB_NAME, check_same_thread=False)
 
 def get_connection():
     db_path = os.path.abspath("dc.db")
